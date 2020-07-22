@@ -4,7 +4,6 @@ import api from '../../services/api';
 import { ads } from '../../constants/functions';
 import colors from '../../constants/colors';
 import InputField from '../../Components/Input';
-import { Button } from './styles';
 import Header from '../../Components/Header';
 
 function AddGroup({ history }) {
@@ -87,7 +86,7 @@ function AddGroup({ history }) {
                   value={url}
                   onChange={(e) => setUrl(e.target.value)}
                 />
-                <Button
+                <button
                   // loading={loading}
                   className="buttonAdd"
                   type="button"
@@ -95,7 +94,7 @@ function AddGroup({ history }) {
                   onClick={() => handleSearch()}
                 >
                   {loading ? 'Aguarde' : 'Validar'}
-                </Button>
+                </button>
               </div>
             ) : (
               <div className="formGroup">
@@ -129,14 +128,15 @@ function AddGroup({ history }) {
                     </option>
                   ))}
                 </select>
-                <Button
+                <button
                   loading={loading}
                   active
+                  className="buttonAdd"
                   type="button"
                   onClick={() => handleSubmit()}
                 >
                   {loading ? 'Aguarde' : 'Enviar grupo'}
-                </Button>
+                </button>
               </div>
             )}
           </div>
