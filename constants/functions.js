@@ -10,63 +10,62 @@ export const GetParam = (key) => {
 };
 
 export const ads = (size) => {
-  const { href } = window.location;
-  console.log('url', href);
-  console.log('incles gerazap', href.includes('gerazap'));
-
-  if (href.includes('gerazap')) {
-    console.log('passou', href);
-    switch (size) {
-      case 'smallBanner':
-        return (
-          <AdSense.Google
-            class="adsbygoogle"
-            style={{ display: 'block', width: '300px', height: '250px' }}
-            client="ca-pub-2270636537108959"
-            slot="5480228173"
-            format=""
-            responsive=""
-          />
-        );
-      case 'banner':
-        return (
-          <AdSense.Google
-            class="adsbygoogle"
-            style={{
-              display: 'block',
-              width: window.innerWidth,
-              height: '90px',
-            }}
-            client="ca-pub-2270636537108959"
-            slot="9000794686"
-            format=""
-            responsive=""
-          />
-        );
-      default:
-        return window.innerWidth < 768 ? (
-          <AdSense.Google
-            class="adsbygoogle"
-            style={{ display: 'block', width: '300px', height: '250px' }}
-            client="ca-pub-2270636537108959"
-            slot="9252076129"
-            format=""
-            responsive=""
-          />
-        ) : (
-          <AdSense.Google
-            class="adsbygoogle"
-            style={{
-              display: 'block',
-              width: window.innerWidth,
-              height: '90px',
-            }}
-            client="ca-pub-2270636537108959"
-            slot="6037847552"
-            format=""
-            responsive=""
-          />
-        );
+  if (process.browser) {
+    // Client-side-only code
+    const { href } = window.location;
+    if (href.includes('gerazap')) {
+      switch (size) {
+        case 'smallBanner':
+          return (
+            <AdSense.Google
+              class="adsbygoogle"
+              style={{ display: 'block', width: '300px', height: '250px' }}
+              client="ca-pub-2270636537108959"
+              slot="5480228173"
+              format=""
+              responsive=""
+            />
+          );
+        case 'banner':
+          return (
+            <AdSense.Google
+              class="adsbygoogle"
+              style={{
+                display: 'block',
+                width: window.innerWidth,
+                height: '90px',
+              }}
+              client="ca-pub-2270636537108959"
+              slot="9000794686"
+              format=""
+              responsive=""
+            />
+          );
+        default:
+          return window.innerWidth < 768 ? (
+            <AdSense.Google
+              class="adsbygoogle"
+              style={{ display: 'block', width: '300px', height: '250px' }}
+              client="ca-pub-2270636537108959"
+              slot="9252076129"
+              format=""
+              responsive=""
+            />
+          ) : (
+            <AdSense.Google
+              class="adsbygoogle"
+              style={{
+                display: 'block',
+                width: window.innerWidth,
+                height: '90px',
+              }}
+              client="ca-pub-2270636537108959"
+              slot="6037847552"
+              format=""
+              responsive=""
+            />
+          );
+      }
     }
   }
 };

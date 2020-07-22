@@ -4,7 +4,7 @@ import { Pagination } from '@material-ui/lab';
 
 import api from '../services/api';
 
-import { GetParam } from '../constants/functions';
+import { GetParam, ads } from '../constants/functions';
 
 import Header from '../Components/Header';
 import Categories from '../Components/Categories';
@@ -35,8 +35,10 @@ export default function Home({ categories, groups }) {
       </Head>
       <Header />
       <Categories categories={categories} />
+
       <main className="container">
         <h1 className="title">Grupos do Whatsapp</h1>
+        {ads()}
         <div className="feed">
           {groupsList &&
             groupsList.map((group) => (
@@ -51,6 +53,7 @@ export default function Home({ categories, groups }) {
           count={totalPages}
           onChange={(func, page) => handlePage(page)}
         />
+        {ads()}
       </main>
       <Footer />
       <style jsx>{``}</style>
