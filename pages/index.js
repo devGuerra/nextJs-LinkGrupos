@@ -86,7 +86,7 @@ export default function Home({ categories, groups }) {
           grid-gap: 15px;
           width: 100%;
         }
-        .title {
+        main .title {
           margin: 20px 0 30px;
           text-align: center;
           font-size: 22px;

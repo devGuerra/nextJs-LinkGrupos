@@ -13,8 +13,10 @@ function Header() {
       <div className="container">
         <ul>
           <li className="title">
-            <img src="newLogoColor.svg" alt="" />
-            <h2>LinkGrupos</h2>
+            <a href="/">
+              <img src="newLogoColor.svg" alt="" />
+              <h2>LinkGrupos</h2>
+            </a>
           </li>
           {signed ? (
             <li className="buttons">
@@ -63,14 +65,21 @@ function Header() {
           align-items: center;
         }
 
-        .title img {
+        .title a {
+          height: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+
+        .title a img {
           height: 80%;
           background-color: #fff;
           display: block;
           border-radius: 5px;
         }
 
-        .title h2 {
+        .title a h2 {
           color: #fff;
           font-size: 18px;
           margin-left: 5px;
@@ -94,7 +103,7 @@ function Header() {
         }
 
         @media (max-width: 600px) {
-          .title img {
+          .title a img {
             display: none;
           }
         }

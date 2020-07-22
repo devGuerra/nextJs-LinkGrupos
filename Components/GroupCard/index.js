@@ -47,6 +47,8 @@ function GroupCard({ data }) {
         }
         .groupCard {
           display: block;
+          max-width: 250px;
+          max-height: 250px;
         }
 
         .groupContent {
@@ -76,6 +78,7 @@ function GroupCard({ data }) {
           color: #000;
           overflow: hidden;
         }
+
         h2 {
           font-size: 16px;
           margin-bottom: 5px;
