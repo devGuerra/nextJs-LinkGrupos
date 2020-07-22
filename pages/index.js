@@ -9,6 +9,7 @@ import { GetParam } from '../constants/functions';
 import Header from '../Components/Header';
 import Categories from '../Components/Categories';
 import GroupCard from '../Components/GroupCard';
+import Footer from '../Components/Footer';
 
 export default function Home({ categories, groups }) {
   const [groupsList, setGroups] = useState(groups.GroupList);
@@ -51,7 +52,7 @@ export default function Home({ categories, groups }) {
           onChange={(func, page) => handlePage(page)}
         />
       </main>
-
+      <Footer />
       <style jsx>{``}</style>
 
       <style jsx global>{`
