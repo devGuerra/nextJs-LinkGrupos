@@ -34,23 +34,7 @@ export default function Home({ categories, groups }) {
         /> */}
       </main>
 
-      <style jsx>{`
-        .feed,
-        .feedOne {
-          padding: 10px 20px;
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          justify-content: center;
-          grid-gap: 15px;
-          width: 100%;
-        }
-        .title {
-          margin: 20px 0 30px;
-          text-align: center;
-          font-size: 22px;
-          color: #fff;
-        }
-      `}</style>
+      <style jsx>{``}</style>
 
       <style jsx global>{`
         html,
@@ -71,6 +55,22 @@ export default function Home({ categories, groups }) {
           text-decoration: none;
         }
 
+        .feed,
+        .feedOne {
+          padding: 10px 50px;
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          justify-content: center;
+          grid-gap: 15px;
+          width: 100%;
+        }
+        .title {
+          margin: 20px 0 30px;
+          text-align: center;
+          font-size: 22px;
+          color: #fff;
+        }
+
         .container {
           display: flex;
           flex-direction: column;
@@ -78,6 +78,20 @@ export default function Home({ categories, groups }) {
           align-items: center;
           width: 100%;
           margin: 0 auto;
+        }
+
+        @media (min-width: 767px) {
+          .feed,
+          .feedOne {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .feed,
+          .feedOne {
+            grid-template-columns: repeat(4, 1fr);
+          }
         }
 
         @media (min-width: 1280px) {

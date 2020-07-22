@@ -37,14 +37,15 @@ function GroupCard({ data }) {
         </a>
       )}
       <style jsx>{`
-        .feed {
+         {
+          /* .feed {
           display: none;
           grid-template-columns: repeat(4, 1fr);
           justify-content: center;
           grid-gap: 15px;
+        } */
         }
         .groupCard {
-          max-width: 350px;
           display: block;
         }
 
@@ -59,12 +60,12 @@ function GroupCard({ data }) {
         }
 
         .groupContent img {
+          height: 100%;
           width: 100%;
         }
 
         .groupDescription {
           width: 100%;
-          // height: 30%;
           padding: 10px;
           background-color: #fff;
           display: flex;
@@ -146,8 +147,6 @@ function GroupCard({ data }) {
 
         @media (max-width: 600px) {
           img {
-            height: 250px;
-            width: 100%;
             margin: 0 auto;
           }
         }
@@ -158,9 +157,6 @@ function GroupCard({ data }) {
             grid-template-columns: repeat(4, 1fr);
             justify-content: center;
             grid-gap: 15px;
-          }
-          .groupCard {
-            max-width: 250px;
           }
         }
       `}</style>

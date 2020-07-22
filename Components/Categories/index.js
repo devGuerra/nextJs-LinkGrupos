@@ -13,7 +13,7 @@ function Categories({ categories }) {
   // }, []);
 
   return (
-    <div className="category" style={{ height: slowDown ? '170px' : '80px' }}>
+    <div className="category" style={{ height: slowDown ? '170px' : '90px' }}>
       <ul>
         {categories ? (
           categories.map((item) => (
@@ -103,6 +103,16 @@ function Categories({ categories }) {
           }
 
           @media (min-width: 769px) {
+            ul {
+              width: 750px;
+              margin: 0 auto;
+              display: grid;
+              justify-content: center;
+              grid-template-columns: repeat(8, 1fr);
+              overflow: hidden;
+            }
+          }
+          @media (min-width: 1200px) {
             ul {
               width: 1100px;
               margin: 0 auto;
