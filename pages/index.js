@@ -1,14 +1,30 @@
 import Head from 'next/head';
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
+import { Pagination } from '@material-ui/lab';
+
+import api from '../services/api';
+
+import { GetParam } from '../constants/functions';
 
 import Header from '../Components/Header';
 import Categories from '../Components/Categories';
 import GroupCard from '../Components/GroupCard';
 
 export default function Home({ categories, groups }) {
-  useEffect(() => {
-    console.log(groups);
-  }, [categories, groups]);
+  const [groupsList, setGroups] = useState(groups.GroupList);
+  const [totalPages, setTotalPages] = useState(groups.totalPages);
+  const [pageIndex, setPageIndex] = useState(1);
+
+  function handlePage(page) {
+    if (page === pageIndex) return;
+    setPageIndex(page);
+    api.get(`/v2/groups?page=${page}`).then((response) => {
+      setGroups(response.data.GroupList);
+      setTotalPages(response.data.totalPages);
+      // window.scrollTo(0, 0);
+      window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+    });
+  }
 
   return (
     <div>
@@ -21,17 +37,19 @@ export default function Home({ categories, groups }) {
       <main className="container">
         <h1 className="title">Grupos do Whatsapp</h1>
         <div className="feed">
-          {groups &&
-            groups.map((group) => <GroupCard key={group._id} data={group} />)}
+          {groupsList &&
+            groupsList.map((group) => (
+              <GroupCard key={group._id} data={group} />
+            ))}
         </div>
 
-        {/* <Pagination
+        <Pagination
           variant="outlined"
           shape="rounded"
           page={pageIndex}
           count={totalPages}
           onChange={(func, page) => handlePage(page)}
-        /> */}
+        />
       </main>
 
       <style jsx>{``}</style>
@@ -79,6 +97,18 @@ export default function Home({ categories, groups }) {
           width: 100%;
           margin: 0 auto;
         }
+        .MuiPagination-root {
+          display: flex;
+          justify-content: center;
+          margin: 30px 0;
+        }
+        .MuiPagination-root ul li .MuiButtonBase-root {
+          background-color: #fff;
+        }
+        .MuiPagination-root ul li .Mui-selected {
+          background-color: #128c7e;
+          color: #fff;
+        }
 
         @media (min-width: 767px) {
           .feed,
@@ -124,7 +154,7 @@ export async function getStaticProps() {
   return {
     props: {
       categories: categories.CategoryList,
-      groups: groups.GroupList,
+      groups: groups,
     },
   };
 }
