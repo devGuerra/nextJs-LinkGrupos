@@ -134,7 +134,7 @@ function Categories({ categories }) {
             width: 32px;
             border-radius: 50%;
             margin-bottom: 5px;
-            border: 1px solid #f1f1f1;
+            border: 1px solid #00000050;
           }
 
           @media (min-width: 769px) {
