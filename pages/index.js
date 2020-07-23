@@ -79,12 +79,10 @@ export default function Home({ categories, groups }) {
 
         .feed,
         .feedOne {
-          padding: 10px 50px;
           display: grid;
           grid-template-columns: repeat(1, 1fr);
           justify-content: center;
           grid-gap: 15px;
-          width: 100%;
         }
         main .title {
           margin: 20px 0 30px;

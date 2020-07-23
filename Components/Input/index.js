@@ -19,14 +19,14 @@ export default function InputField({
   props,
 }) {
   return (
-    <Container bg={bg} error={error}>
+    <div bg={bg} error={error} className="wrap">
       {title && (
-        <Text bg={bg} error={error}>
+        <span bg={bg} error={error}>
           {title}
-        </Text>
+        </span>
       )}
       {type === 'TextInput' ? (
-        <Input
+        <input
           props
           required
           value={value}
@@ -39,7 +39,7 @@ export default function InputField({
           multiline={multiline}
         />
       ) : (
-        <TextArea
+        <textarea
           required
           onChange={onChange}
           rows={rows}
@@ -54,6 +54,65 @@ export default function InputField({
           secureTextEntry={type === 'Password'}
         />
       )}
-    </Container>
+      <style jsx>{`
+        .wrap {
+          position: relative;
+          height: 56px;
+          border-radius: 10px;
+          width: 100%;
+          margin: 10px 0;
+          background-color: 'transparent';
+          border-color: '#000';
+          border: 1px solid #ccc;
+          /* justify-content: center; */
+          /* align-items: center; */
+        }
+
+        input {
+          width: 100%;
+          height: 50px;
+          font-size: 16px;
+          color: #fff;
+          background-color: transparent;
+          -webkit-appearance: none;
+          border: 0;
+          outline: 0;
+          background-color: transparent;
+          border-color: transparent;
+          padding: 0 10px;
+        }
+
+        textarea {
+          padding: 10px;
+          width: 100%;
+          font-size: 16px;
+          color: #000;
+          background-color: transparent;
+          border-color: transparent;
+        }
+
+        span {
+          font-size: 14px;
+          color: #fff;
+          position: absolute;
+          top: -10px;
+          left: 10px;
+          padding: 0 5px;
+          background-color: #172a3a;
+          z-index: 10;
+        }
+        .error {
+          font-size: 18px;
+          color: red;
+          position: absolute;
+          top: -10px;
+          left: 10px;
+          padding: 0 5px;
+          font-size: 14px;
+          background-color: #172a3a;
+          z-index: 10;
+        }
+      `}</style>
+    </div>
   );
 }
