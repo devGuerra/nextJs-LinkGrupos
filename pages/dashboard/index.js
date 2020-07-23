@@ -9,6 +9,7 @@ import Header from '../../Components/Header';
 function dashboard({ match }) {
   const [groups, setGroups] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -17,6 +18,7 @@ function dashboard({ match }) {
     });
 
     setLoading(false);
+    setReady(true);
   }, []);
 
   return (
@@ -25,14 +27,14 @@ function dashboard({ match }) {
       <main>
         <div className="container">
           <h2 className="title">Approve</h2>
-          {ads()}
+          {ready && ads()}
           <div className="feed">
             {groups.map((group) => (
               <CardApprove key={group._id} group={group} />
             ))}
           </div>
           <Pagination page={0} />
-          {ads()}
+          {ready && ads()}
         </div>
       </main>
       <style jsx global>{`
