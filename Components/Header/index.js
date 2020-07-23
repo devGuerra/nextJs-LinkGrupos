@@ -25,18 +25,18 @@ function Header() {
               <a href="/new-group" className="new__group">
                 Adicionar Grupo
               </a>
-              <button onClick={() => router.reload()} className="login">
+              {/* <button onClick={() => router.reload()} className="login">
                 Sair
-              </button>
+              </button> */}
             </li>
           ) : (
             <li className="buttons">
               <a href="/new-group" className="new__group">
                 Adicionar Grupo
               </a>
-              <a href="/login" className="button_login">
+              {/* <a href="/login" className="button_login">
                 Login
-              </a>
+              </a> */}
             </li>
           )}
         </ul>
