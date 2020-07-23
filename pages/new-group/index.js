@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 import api from '../../services/api';
@@ -72,11 +73,20 @@ function AddGroup({ history }) {
 
   return (
     <>
+      <Head>
+        <title>LinkGroups - Grupos do whatsapp</title>
+        <link rel="icon" href="/favicon.ico" />
+        <script
+          async
+          type="text/javascript"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        />
+      </Head>
       <Header />
       <main id="addGroup">
         <div className="container">
           <h1>Enviar novo grupo</h1>
-          <Ad slotId="5480228173" width={1024} height={90} />
+
           <div className="box">
             <div className="avatar">
               <img src={group.avatar} alt="" />
@@ -143,6 +153,7 @@ function AddGroup({ history }) {
               </div>
             )}
           </div>
+          <Ad slotId="5480228173" width={1024} height={90} />
         </div>
       </main>
       <style jsx>

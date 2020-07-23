@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 import { Pagination, Skeleton } from '@material-ui/lab';
 
 import Ad from '../../Components/Ad';
@@ -35,6 +36,15 @@ const Group = (props) => {
 
   return (
     <>
+      <Head>
+        <title>LinkGroups - Grupos do whatsapp</title>
+        <link rel="icon" href="/favicon.ico" />
+        <script
+          async
+          type="text/javascript"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        />
+      </Head>
       <Header />
       <Categories categories={categories} />
       <main className="container">

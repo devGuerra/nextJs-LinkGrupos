@@ -13,6 +13,8 @@ const Ad = ({ slotId, width, height }) => {
         display: 'inline-block',
         width: `${largura > 600 ? width : 250}px`,
         height: `${largura > 600 ? height : 250}px`,
+        background: '#fff',
+        margin: '10px auto ',
       }}
       data-ad-client="ca-pub-2270636537108959"
       data-ad-slot={slotId}

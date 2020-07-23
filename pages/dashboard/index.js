@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
 
 import api from '../../services/api';
 import CardApprove from '../../Components/CardApprove';
@@ -23,6 +24,15 @@ function dashboard({ match }) {
 
   return (
     <>
+      <Head>
+        <title>LinkGroups - Grupos do whatsapp</title>
+        <link rel="icon" href="/favicon.ico" />
+        <script
+          async
+          type="text/javascript"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        />
+      </Head>
       <Header />
       <main>
         <div className="container">

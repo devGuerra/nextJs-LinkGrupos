@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 import api from '../../services/api';
@@ -26,28 +27,44 @@ const Group = (props) => {
 
   return (
     <>
+      <Head>
+        <title>LinkGroups - Grupos do whatsapp</title>
+        <link rel="icon" href="/favicon.ico" />
+        <script
+          async
+          type="text/javascript"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        />
+      </Head>
       <Header />
+      <Categories categories={categories} />
       <main>
-        <Categories categories={categories} />
         <div id="groupDetails" className="feed container">
           <h1>{group.name}</h1>
-          <Ad slotId="5480228173" width={1024} height={90} />
           <div className="group feed">
             <GroupCard data={group} />{' '}
           </div>
         </div>
-        <Ad slotId="9000794686" width={1024} height={90} />
+        <Ad slotId="5480228173" width={1024} height={90} />
+        {/* <Ad slotId="9000794686" width={1024} height={90} /> */}
       </main>
 
       <style jsx global>{`
         html,
-        body {
+        body,
+        #__next {
           padding: 0;
           margin: 0;
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
             Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
             sans-serif;
           background: #172a3a;
+          height: 100%;
+        }
+
+        #groupDetails {
+          justify-content: start;
+          margin-bottom: 100px;
         }
 
         * {
@@ -60,11 +77,14 @@ const Group = (props) => {
 
         .feed,
         .feedOne {
-          padding: 10px 50px;
           display: flex;
           justify-content: center;
           grid-gap: 15px;
           width: 100%;
+        }
+        main {
+          text-align: center;
+          height: 100%;
         }
         main h1 {
           margin: 20px 0 30px;
