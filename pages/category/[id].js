@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { Pagination, Skeleton } from '@material-ui/lab';
 
-import { ads } from '../../constants/functions';
+import Ad from '../../Components/Ad';
 import api from '../../services/api';
 import GroupCard from '../../Components/GroupCard';
 import Categories from '../../Components/Categories';
@@ -39,7 +39,7 @@ const Group = (props) => {
       <Categories categories={categories} />
       <main className="container">
         <h1 className="title">{id}</h1>
-        {ads()}
+        <Ad slotId="5480228173" />
         <div className="feed">
           {group && !loader ? (
             group.map((group) => <GroupCard key={group._id} data={group} />)
@@ -80,7 +80,7 @@ const Group = (props) => {
           count={totalPages}
           onChange={(func, page) => handlePage(page)}
         />
-        {ads()}
+        <Ad slotId="9000794686" />
       </main>
 
       <style jsx global>{`

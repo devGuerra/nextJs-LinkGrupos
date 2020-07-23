@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { ads } from '../../constants/functions';
 
 import api from '../../services/api';
 import GroupCard from '../../Components/GroupCard';
 import Categories from '../../Components/Categories';
 import Header from '../../Components/Header';
+import Ad from '../../Components/Ad';
 
 const Group = (props) => {
   const [group, setGroup] = useState([]);
@@ -31,12 +31,12 @@ const Group = (props) => {
         <Categories categories={categories} />
         <div id="groupDetails" className="feed container">
           <h1>{group.name}</h1>
-          {ads()}
+          <Ad slotId="5480228173" />
           <div className="group feed">
             <GroupCard data={group} />{' '}
           </div>
         </div>
-        {ads()}
+        <Ad slotId="9000794686" />
       </main>
 
       <style jsx global>{`

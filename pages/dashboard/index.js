@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { ads } from '../../constants/functions';
 
 import api from '../../services/api';
 import CardApprove from '../../Components/CardApprove';
 import { Pagination } from '@material-ui/lab';
 import Header from '../../Components/Header';
+import Ad from '../../Components/Ad';
 
 function dashboard({ match }) {
   const [groups, setGroups] = useState([]);
@@ -27,14 +27,14 @@ function dashboard({ match }) {
       <main>
         <div className="container">
           <h2 className="title">Approve</h2>
-          {ready && ads()}
+          <Ad slotId="5480228173" />
           <div className="feed">
             {groups.map((group) => (
               <CardApprove key={group._id} group={group} />
             ))}
           </div>
           <Pagination page={0} />
-          {ready && ads()}
+          <Ad slotId="9000794686" />
         </div>
       </main>
       <style jsx global>{`

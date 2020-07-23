@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 import api from '../../services/api';
-import { ads } from '../../constants/functions';
 import colors from '../../constants/colors';
 import InputField from '../../Components/Input';
 import Header from '../../Components/Header';
+import Ad from '../../Components/Ad';
 
 function AddGroup({ history }) {
   const [user] = useState('Desktop');
@@ -76,7 +76,7 @@ function AddGroup({ history }) {
       <main id="addGroup">
         <div className="container">
           <h1>Enviar novo grupo</h1>
-          {ads()}
+          <Ad slotId="5480228173" />
           <div className="box">
             <div className="avatar">
               <img src={group.avatar} alt="" />

@@ -8,12 +8,10 @@ const Ad = ({ slotId, width, height }) => {
   return (
     <ins
       className="adsbygoogle"
-      style={{
-        display: 'inline-block',
-        width: `${width}px`,
-        height: `${height}px`,
-      }}
+      style="display:block"
       data-ad-client="ca-pub-2270636537108959"
+      data-ad-format="auto"
+      data-full-width-responsive="true"
       data-ad-slot={slotId}
     />
   );
