@@ -11,8 +11,10 @@ const Ad = ({ slotId, width, height }) => {
       className="adsbygoogle"
       style={{
         display: 'inline-block',
-        width: `${largura > 600 ? width : 250}px`,
-        height: `${largura > 600 ? height : 250}px`,
+        // width: `${largura > 600 ? width : 250}px`,
+        // height: `${largura > 600 ? height : 250}px`,
+        width: `100%`,
+        height: `90px`,
         background: '#fff',
         margin: '10px auto ',
       }}
