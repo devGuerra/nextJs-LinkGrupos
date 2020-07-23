@@ -31,6 +31,7 @@ const Group = (props) => {
         <Categories categories={categories} />
         <div id="groupDetails" className="feed container">
           <h1>{group.name}</h1>
+          {ads()}
           <div className="group feed">
             <GroupCard data={group} />{' '}
           </div>

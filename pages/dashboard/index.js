@@ -25,12 +25,14 @@ function dashboard({ match }) {
       <main>
         <div className="container">
           <h2 className="title">Approve</h2>
+          {ads()}
           <div className="feed">
             {groups.map((group) => (
               <CardApprove key={group._id} group={group} />
             ))}
           </div>
           <Pagination page={0} />
+          {ads()}
         </div>
       </main>
       <style jsx global>{`
