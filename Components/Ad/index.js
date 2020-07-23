@@ -6,14 +6,12 @@ const Ad = ({ slotId, width, height }) => {
   }, []);
   return (
     <ins
-      className="adsbygoogle"
-      style={{
-        display: 'inline-block',
-        width: `${width}px`,
-        height: `${height}px`,
-      }}
-      data-ad-client="ca-pub-2270636537108959"
       data-ad-slot={slotId}
+      data-full-width-responsive="true"
+      data-ad-format="auto"
+      data-ad-client="ca-pub-2270636537108959"
+      style={{ display: 'block' }}
+      className="adsbygoogle"
     />
   );
 };
