@@ -14,7 +14,7 @@ function Header() {
         <ul>
           <li className="title">
             <a href="/">
-              <img src="newLogoColor.svg" alt="" />
+              <img src="/newLogoColor.svg" alt="" />
               <h2>LinkGrupos</h2>
             </a>
           </li>
@@ -47,7 +47,6 @@ function Header() {
           display: flex;
           justify-content: center;
           width: 100%;
-          padding: 0 20px;
         }
 
         ul {

@@ -105,7 +105,6 @@ const Group = (props) => {
         @media (min-width: 1280px) {
           .container {
             max-width: 1100px;
-            padding: 0 20px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
