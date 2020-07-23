@@ -44,7 +44,29 @@ export default function Home({ categories, groups }, props) {
   return (
     <div>
       <Head>
-        <title>LinkGroups - Grupos do whatsapp</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta httpEquiv="Content-Language" content="pt-br" />
+        <link rel="canonical" href="https://linkgrupos.app" />
+        <meta
+          name="description"
+          content="Os melhores links de grupos do whatsapp,  encontre as melhores categorias,
+                gratis e facil, em apenas um click ja esta com um novo Grupo do whatsapp"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://linkgrupos.app" />
+        <meta property="og:image" content="/newLogoColor.svg" />
+        <meta
+          property="og:title"
+          content="Links de Grupos do Whatsapp - LinkGrupos"
+        />
+        <meta
+          property="og:description"
+          content="Os melhores links de grupos do whatsapp,  encontre as melhores categorias,
+                gratis e facil, em apenas um click ja esta com um novo Grupo do whatsapp"
+        />
+        <meta property="og:site_name" content="WhatsApp Group Links" />
+        <title>Links de Grupos do Whatsapp - LinkGrupos</title>
         <link rel="icon" href="/favicon.ico" />
         <script
           async
