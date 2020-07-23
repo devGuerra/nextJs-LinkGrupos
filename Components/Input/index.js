@@ -57,7 +57,6 @@ export default function InputField({
       <style jsx>{`
         .wrap {
           position: relative;
-          height: 56px;
           border-radius: 10px;
           width: 100%;
           margin: 10px 0;
@@ -86,7 +85,7 @@ export default function InputField({
           padding: 10px;
           width: 100%;
           font-size: 16px;
-          color: #000;
+          color: #fff;
           background-color: transparent;
           border-color: transparent;
         }

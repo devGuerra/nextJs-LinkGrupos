@@ -10,6 +10,7 @@ import Header from '../../Components/Header';
 
 const Group = (props) => {
   const [group, setGroup] = useState([]);
+  const [categories, setCategories] = useState([]);
   const [totalPages, setTotalPages] = useState(0);
   const [pageIndex, setPageIndex] = useState(1);
   const [loader, setLoader] = useState(true);
@@ -19,6 +20,7 @@ const Group = (props) => {
   useEffect(() => {
     const { id } = router.query;
     setId(id);
+    console.log('props', props);
     if (id) {
       api.get(`/v2/groups/${id}`).then((response) => {
         setGroup(response.data.GroupList);
@@ -26,12 +28,15 @@ const Group = (props) => {
         setLoader(false);
       });
     }
+    api.get(`/category`).then((response) => {
+      setCategories(response.data.CategoryList);
+    });
   }, [router.query.id]);
 
   return (
     <>
       <Header />
-      <Categories />
+      <Categories categories={categories} />
       <main className="container">
         <h1 className="title">{id}</h1>
         {ads()}

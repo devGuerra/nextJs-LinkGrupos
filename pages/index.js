@@ -1,20 +1,24 @@
 import Head from 'next/head';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Pagination } from '@material-ui/lab';
+import { ToastContainer, toast } from 'react-nextjs-toast';
+import { useRouter } from 'next/router';
 
 import api from '../services/api';
-
 import { GetParam, ads } from '../constants/functions';
-
 import Header from '../Components/Header';
 import Categories from '../Components/Categories';
 import GroupCard from '../Components/GroupCard';
 import Footer from '../Components/Footer';
 
-export default function Home({ categories, groups }) {
+export default function Home({ categories, groups }, props) {
   const [groupsList, setGroups] = useState(groups.GroupList);
   const [totalPages, setTotalPages] = useState(groups.totalPages);
   const [pageIndex, setPageIndex] = useState(1);
+
+  const {
+    query: { sucess },
+  } = useRouter();
 
   function handlePage(page) {
     if (page === pageIndex) return;
@@ -27,10 +31,19 @@ export default function Home({ categories, groups }) {
     });
   }
 
+  useEffect(() => {
+    if (sucess === 'true') {
+      toast.notify('Você enviou um novo grupo! Em breve estará disponível!', {
+        duration: 5,
+        type: 'success',
+      });
+    }
+  }, [sucess]);
+
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>LinkGroups - Grupos do whatsapp</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
@@ -78,6 +91,17 @@ export default function Home({ categories, groups }) {
           box-sizing: border-box;
           font-family: 'Roboto', sans-serif;
           text-decoration: none;
+        }
+
+        #toast-container {
+          z-index: 1000;
+        }
+
+        #toast-message {
+          background: #128c7e;
+        }
+        #toast-message div {
+          color: #fff;
         }
 
         .feed,
@@ -141,6 +165,7 @@ export default function Home({ categories, groups }) {
           }
         }
       `}</style>
+      <ToastContainer align={'right'} />
     </div>
   );
 }

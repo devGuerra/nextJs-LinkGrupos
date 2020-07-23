@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useRouter } from 'next/router';
 // import ReactGA from 'react-ga';
 // import { useDispatch, useSelector } from 'react-redux';
 // import logo from '/favicon.ico';
@@ -6,6 +7,7 @@ import React, { useState } from 'react';
 // import { signOut } from '~/store/modules/auth/actions';
 
 function Header() {
+  const router = useRouter();
   const [signed] = useState(true);
 
   return (
@@ -23,7 +25,7 @@ function Header() {
               <a href="/new-group" className="new__group">
                 Adicionar Grupo
               </a>
-              <button onClick={() => console.log('a')} className="login">
+              <button onClick={() => router.reload()} className="login">
                 Sair
               </button>
             </li>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 import api from '../../services/api';
 import { ads } from '../../constants/functions';
@@ -16,6 +17,8 @@ function AddGroup({ history }) {
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState('');
   const [loading, setLoading] = useState(false);
+
+  const router = useRouter();
 
   useEffect(() => {
     api
@@ -59,7 +62,7 @@ function AddGroup({ history }) {
         owner: user.username,
       })
       .then((response) => {
-        history.push('/?sucess=true');
+        router.push('/?sucess=true');
       })
       .catch((err) => {
         setLoading(false);

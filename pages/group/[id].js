@@ -9,6 +9,7 @@ import Header from '../../Components/Header';
 
 const Group = (props) => {
   const [group, setGroup] = useState([]);
+  const [categories, setCategories] = useState([]);
   const router = useRouter();
 
   useEffect(() => {
@@ -18,13 +19,16 @@ const Group = (props) => {
         .get(`/groups/${id}`)
         .then((response) => setGroup(response.data.group));
     }
+    api.get(`/category`).then((response) => {
+      setCategories(response.data.CategoryList);
+    });
   }, [router.query.id]);
 
   return (
     <>
       <Header />
       <main>
-        <Categories />
+        <Categories categories={categories} />
         <div id="groupDetails" className="feed container">
           <h1>{group.name}</h1>
           <div className="group feed">
