@@ -1,17 +1,21 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Ad = ({ slotId, width, height }) => {
+  const [largura, setLargura] = useState(0);
   useEffect(() => {
     (window.adsbygoogle = window.adsbygoogle || []).push({});
+    setLargura(window.screen.width);
   }, []);
   return (
     <ins
-      data-ad-slot={slotId}
-      data-full-width-responsive="true"
-      data-ad-format="auto"
-      data-ad-client="ca-pub-2270636537108959"
-      style={{ display: 'block' }}
       className="adsbygoogle"
+      style={{
+        display: 'inline-block',
+        width: `${largura > 600 ? width : 250}px`,
+        height: `${largura > 600 ? height : 250}px`,
+      }}
+      data-ad-client="ca-pub-2270636537108959"
+      data-ad-slot={slotId}
     />
   );
 };

@@ -57,7 +57,7 @@ export default function Home({ categories, groups }, props) {
 
       <main className="container">
         <h1 className="title">Grupos do Whatsapp</h1>
-        <Ad slotId="5480228173" width={728} height={90} />
+        <Ad slotId="5480228173" width={1024} height={90} />
         <div className="feed">
           {groupsList &&
             groupsList.map((group) => (
@@ -72,7 +72,7 @@ export default function Home({ categories, groups }, props) {
           count={totalPages}
           onChange={(func, page) => handlePage(page)}
         />
-        <Ad slotId="5480228173" width={728} height={90} />
+        <Ad slotId="9000794686" width={1024} height={90} />
       </main>
       <Footer />
       <style jsx>{``}</style>

@@ -31,12 +31,12 @@ const Group = (props) => {
         <Categories categories={categories} />
         <div id="groupDetails" className="feed container">
           <h1>{group.name}</h1>
-          <Ad slotId="5480228173" />
+          <Ad slotId="5480228173" width={1024} height={90} />
           <div className="group feed">
             <GroupCard data={group} />{' '}
           </div>
         </div>
-        <Ad slotId="9000794686" />
+        <Ad slotId="9000794686" width={1024} height={90} />
       </main>
 
       <style jsx global>{`

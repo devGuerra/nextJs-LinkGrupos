@@ -76,7 +76,7 @@ function AddGroup({ history }) {
       <main id="addGroup">
         <div className="container">
           <h1>Enviar novo grupo</h1>
-          <Ad slotId="5480228173" />
+          <Ad slotId="5480228173" width={1024} height={90} />
           <div className="box">
             <div className="avatar">
               <img src={group.avatar} alt="" />

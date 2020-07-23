@@ -39,7 +39,7 @@ const Group = (props) => {
       <Categories categories={categories} />
       <main className="container">
         <h1 className="title">{id}</h1>
-        <Ad slotId="5480228173" />
+        <Ad slotId="5480228173" width={1024} height={90} />
         <div className="feed">
           {group && !loader ? (
             group.map((group) => <GroupCard key={group._id} data={group} />)
@@ -80,7 +80,7 @@ const Group = (props) => {
           count={totalPages}
           onChange={(func, page) => handlePage(page)}
         />
-        <Ad slotId="9000794686" />
+        <Ad slotId="9000794686" width={1024} height={90} />
       </main>
 
       <style jsx global>{`
