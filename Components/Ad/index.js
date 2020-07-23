@@ -15,7 +15,6 @@ const Ad = ({ slotId, width, height }) => {
         // height: `${largura > 600 ? height : 250}px`,
         width: `100%`,
         height: `90px`,
-        background: '#fff',
         margin: '10px auto ',
       }}
       data-ad-client="ca-pub-2270636537108959"
