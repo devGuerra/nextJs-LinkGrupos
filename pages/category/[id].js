@@ -119,6 +119,12 @@ const Group = (props) => {
           color: #fff;
         }
 
+        ins.adsbygoogle {
+          margin: 0 auto 10px;
+          // background-color: #fff;
+          max-width: 1100px;
+        }
+
         .container {
           display: flex;
           flex-direction: column;
