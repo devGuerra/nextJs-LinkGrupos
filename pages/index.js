@@ -49,7 +49,7 @@ export default function Home({ categories, groups }, props) {
         <meta httpEquiv="Content-Language" content="pt-br" />
         <link rel="canonical" href="https://linkgrupos.app" />
         <meta
-          name="description"
+          name="Description"
           content="Os melhores links de grupos do whatsapp,  encontre as melhores categorias,
                 gratis e facil, em apenas um click ja esta com um novo Grupo do whatsapp"
         />
