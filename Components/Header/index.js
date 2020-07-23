@@ -76,6 +76,8 @@ function Header() {
           background-color: #fff;
           display: block;
           border-radius: 5px;
+          height: 48px;
+          width: 48px;
         }
 
         .title a h2 {

@@ -60,13 +60,16 @@ export default function Home({ categories, groups }) {
 
       <style jsx global>{`
         html,
-        body {
+        body,
+        #__next,
+        main {
           padding: 0;
           margin: 0;
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
             Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
             sans-serif;
           background: #172a3a;
+          height: 100%;
         }
 
         * {

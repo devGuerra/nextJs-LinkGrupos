@@ -33,6 +33,7 @@ const Group = (props) => {
         </div>
         {ads()}
       </main>
+
       <style jsx global>{`
         html,
         body {
