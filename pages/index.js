@@ -10,6 +10,7 @@ import Header from '../Components/Header';
 import Categories from '../Components/Categories';
 import GroupCard from '../Components/GroupCard';
 import Footer from '../Components/Footer';
+import Ad from '../Components/Ad';
 
 export default function Home({ categories, groups }, props) {
   const [groupsList, setGroups] = useState(groups.GroupList);
@@ -51,7 +52,7 @@ export default function Home({ categories, groups }, props) {
 
       <main className="container">
         <h1 className="title">Grupos do Whatsapp</h1>
-        {ads()}
+        <Ad slotId="5480228173" width={728} height={90} />
         <div className="feed">
           {groupsList &&
             groupsList.map((group) => (
