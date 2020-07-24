@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Skeleton } from '@material-ui/lab';
-
+import { FaUserTie } from 'react-icons/fa';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { fas } from '@fortawesome/free-solid-svg-icons';
 import api from '../../services/api';
 
 function Categories({ categories }) {
+  library.add(fas);
   const [slowDown, setSlowDown] = useState(false);
 
   // useEffect(() => {
@@ -16,18 +20,30 @@ function Categories({ categories }) {
     <div className="category" style={{ height: slowDown ? '170px' : '90px' }}>
       <ul>
         {categories ? (
-          categories.map((item) => (
-            <a href={`/category/${item.categoryName}`} key={item._id}>
-              <li>
-                <img
-                  className="icon"
-                  src={item.avatar}
-                  alt={item.categoryName}
-                />
-                {item.categoryName}
-              </li>
-            </a>
-          ))
+          categories.map((item) => {
+            console.log(item.icon);
+            return (
+              <a href={`/category/${item.categoryName}`} key={item._id}>
+                <li>
+                  {item.icon ? (
+                    <FontAwesomeIcon
+                      icon={item.icon}
+                      color="#172A3A"
+                      size="2x"
+                    />
+                  ) : (
+                    <img
+                      className="icon"
+                      src={item.avatar}
+                      alt={item.categoryName}
+                    />
+                  )}
+
+                  {item.categoryName}
+                </li>
+              </a>
+            );
+          })
         ) : (
           <ul>
             <li>
@@ -77,7 +93,7 @@ function Categories({ categories }) {
         {!slowDown ? 'ver mais' : 'ver menos'}
       </button>
 
-      <style jsx>
+      <style jsx global>
         {`
           .loading {
             display: flex;
@@ -128,8 +144,9 @@ function Categories({ categories }) {
             color: #000;
           }
 
-          li {
-            margin: 10px;
+          .category li {
+            margin: 20px;
+            height: 45px;
             list-style: none;
             white-space: nowrap;
             display: flex;

@@ -173,6 +173,11 @@ export default function Home({ categories, groups }, props) {
           color: #fff;
         }
 
+        .category li {
+          margin: 20px;
+          height: 45px;
+        }
+
         @media (min-width: 767px) {
           .feed,
           .feedOne {
