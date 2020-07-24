@@ -89,7 +89,11 @@ function Categories({ categories }) {
           </ul>
         )}
       </ul>
-      <button type="button" onClick={() => setSlowDown(!slowDown)}>
+      <button
+        type="button"
+        className="buttonMoreItens"
+        onClick={() => setSlowDown(!slowDown)}
+      >
         {!slowDown ? 'ver mais' : 'ver menos'}
       </button>
 
@@ -146,7 +150,6 @@ function Categories({ categories }) {
 
           .category li {
             margin: 20px;
-            height: 45px;
             list-style: none;
             white-space: nowrap;
             display: flex;
@@ -171,7 +174,7 @@ function Categories({ categories }) {
             }
           }
 
-          button {
+          button.buttonMoreItens {
             position: absolute;
             bottom: -10px;
             display: block;
