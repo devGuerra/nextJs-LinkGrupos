@@ -73,6 +73,11 @@ export default function Home({ categories, groups }, props) {
           type="text/javascript"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
         />
+        <script
+          data-ad-client="ca-pub-2270636537108959"
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        ></script>
       </Head>
       <Header />
       <Categories categories={categories} />
