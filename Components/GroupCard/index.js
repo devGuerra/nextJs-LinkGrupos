@@ -8,7 +8,7 @@ function GroupCard({ data }) {
         <>
           <a
             className="groupCard"
-            href={data.url}
+            href={`https://chat.whatsapp.com/${data.url}`}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -26,16 +26,16 @@ function GroupCard({ data }) {
           {/* <button className="report">reportar</button> */}
         </>
       ) : (
-        <a className="groupCard" href={`/group/${data._id}`}>
-          <div className="groupContent">
-            <img src={data.avatar} alt={data.name} />
-            <div className="groupDescription">
-              <h2>{data.name}</h2>
-              {data.description && <span>{data.description}</span>}
+          <a className="groupCard" href={`/group/${data._id}`}>
+            <div className="groupContent">
+              <img src={data.avatar} alt={data.name} />
+              <div className="groupDescription">
+                <h2>{data.name}</h2>
+                {data.description && <span>{data.description}</span>}
+              </div>
             </div>
-          </div>
-        </a>
-      )}
+          </a>
+        )}
       <style jsx>{`
          {
           /* .feed {
