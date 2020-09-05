@@ -24,6 +24,7 @@ function GroupCard({ data }) {
             </button>
           </a>
           {/* <button className="report">reportar</button> */}
+
         </>
       ) : (
           <a className="groupCard" href={`/group/${data._id}`}>

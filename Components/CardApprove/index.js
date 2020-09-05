@@ -44,7 +44,7 @@ function CardApprove({ group }) {
               Reprovar
             </button>
             <button className="btn-chat">
-              <a href={grupo.url} target="_blank">
+              <a href={`https://chat.whatsapp.com/${grupo.url}`} target="_blank">
                 Link
               </a>
             </button>
