@@ -43,8 +43,8 @@ function dashboard({ match }) {
               <CardApprove key={group._id} group={group} />
             ))}
           </div>
-          <Ad slotId="9000794686" width={1024} height={90} />
           <Pagination page={0} />
+          <Ad slotId="9000794686" width={1024} height={90} />
         </div>
       </main>
       <style jsx global>{`
