@@ -21,7 +21,6 @@ function Categories({ categories }) {
       <ul>
         {categories ? (
           categories.map((item) => {
-            console.log(item.icon);
             return (
               <a href={`/category/${item.categoryName}`} key={item._id}>
                 <li>
@@ -32,12 +31,12 @@ function Categories({ categories }) {
                       size="2x"
                     />
                   ) : (
-                    <img
-                      className="icon"
-                      src={item.avatar}
-                      alt={item.categoryName}
-                    />
-                  )}
+                      <img
+                        className="icon"
+                        src={item.avatar}
+                        alt={item.categoryName}
+                      />
+                    )}
 
                   {item.categoryName}
                 </li>
@@ -45,49 +44,49 @@ function Categories({ categories }) {
             );
           })
         ) : (
-          <ul>
-            <li>
-              <Skeleton variant="circle" width={40} height={40} />
-              <Skeleton variant="text" width={60} height={20} />
-            </li>
-            <li>
-              <Skeleton variant="circle" width={40} height={40} />
-              <Skeleton variant="text" width={60} height={20} />
-            </li>
-            <li>
-              <Skeleton variant="circle" width={40} height={40} />
-              <Skeleton variant="text" width={60} height={20} />
-            </li>
-            <li>
-              <Skeleton variant="circle" width={40} height={40} />
-              <Skeleton variant="text" width={60} height={20} />
-            </li>
-            <li>
-              <Skeleton variant="circle" width={40} height={40} />
-              <Skeleton variant="text" width={60} height={20} />
-            </li>
-            <li>
-              <Skeleton variant="circle" width={40} height={40} />
-              <Skeleton variant="text" width={60} height={20} />
-            </li>
-            <li>
-              <Skeleton variant="circle" width={40} height={40} />
-              <Skeleton variant="text" width={60} height={20} />
-            </li>
-            <li>
-              <Skeleton variant="circle" width={40} height={40} />
-              <Skeleton variant="text" width={60} height={20} />
-            </li>
-            <li>
-              <Skeleton variant="circle" width={40} height={40} />
-              <Skeleton variant="text" width={60} height={20} />
-            </li>
-            <li>
-              <Skeleton variant="circle" width={40} height={40} />
-              <Skeleton variant="text" width={60} height={20} />
-            </li>
-          </ul>
-        )}
+            <ul>
+              <li>
+                <Skeleton variant="circle" width={40} height={40} />
+                <Skeleton variant="text" width={60} height={20} />
+              </li>
+              <li>
+                <Skeleton variant="circle" width={40} height={40} />
+                <Skeleton variant="text" width={60} height={20} />
+              </li>
+              <li>
+                <Skeleton variant="circle" width={40} height={40} />
+                <Skeleton variant="text" width={60} height={20} />
+              </li>
+              <li>
+                <Skeleton variant="circle" width={40} height={40} />
+                <Skeleton variant="text" width={60} height={20} />
+              </li>
+              <li>
+                <Skeleton variant="circle" width={40} height={40} />
+                <Skeleton variant="text" width={60} height={20} />
+              </li>
+              <li>
+                <Skeleton variant="circle" width={40} height={40} />
+                <Skeleton variant="text" width={60} height={20} />
+              </li>
+              <li>
+                <Skeleton variant="circle" width={40} height={40} />
+                <Skeleton variant="text" width={60} height={20} />
+              </li>
+              <li>
+                <Skeleton variant="circle" width={40} height={40} />
+                <Skeleton variant="text" width={60} height={20} />
+              </li>
+              <li>
+                <Skeleton variant="circle" width={40} height={40} />
+                <Skeleton variant="text" width={60} height={20} />
+              </li>
+              <li>
+                <Skeleton variant="circle" width={40} height={40} />
+                <Skeleton variant="text" width={60} height={20} />
+              </li>
+            </ul>
+          )}
       </ul>
       <button
         type="button"
