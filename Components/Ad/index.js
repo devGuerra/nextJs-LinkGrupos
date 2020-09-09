@@ -10,7 +10,7 @@ const Ad = ({ slotId, width, height }) => {
     <ins
       className="adsbygoogle"
       style={{
-        display: 'inline-block',
+        display: 'block',
         // width: `${largura > 600 ? width : 250}px`,
         // height: `${largura > 600 ? height : 250}px`,
         width: `100%`,
@@ -18,8 +18,10 @@ const Ad = ({ slotId, width, height }) => {
         margin: '10px auto ',
       }}
       data-ad-client="ca-pub-2270636537108959"
+      data-ad-format="auto"
+      data-full-width-responsive="true"
       data-ad-slot={slotId}
-    />
+    ></ins>
   );
 };
 

@@ -44,7 +44,7 @@ function dashboard({ match }) {
             ))}
           </div>
           <Pagination page={0} />
-          <Ad slotId="9000794686" width={1024} height={90} />
+          <Ad slotId="7730827428" width={1024} height={90} />
         </div>
       </main>
       <style jsx global>{`
