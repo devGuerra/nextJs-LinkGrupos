@@ -37,14 +37,14 @@ function dashboard({ match }) {
       <main>
         <div className="container">
           <h2 className="title">Approve</h2>
-          <Ad slotId="9000794686" width={1024} height={90} />
+          {/* <Ad slotId="9000794686" width={1024} height={90} /> */}
           <div className="feed">
             {groups.map((group) => (
               <CardApprove key={group._id} group={group} />
             ))}
           </div>
+          <Ad slotId="9000794686" width={1024} height={90} />
           <Pagination page={0} />
-          <Ad slotId="5480228173" width={1024} height={90} />
         </div>
       </main>
       <style jsx global>{`
