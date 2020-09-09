@@ -69,6 +69,12 @@ function dashboard({ match }) {
           text-decoration: none;
         }
 
+        ins.adsbygoogle {
+          margin: 0 auto 10px;
+          // background-color: #fff;
+          max-width: 1100px;
+        }
+
         #toast-container {
           z-index: 1000;
         }
