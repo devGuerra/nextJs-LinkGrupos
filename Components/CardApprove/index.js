@@ -36,7 +36,7 @@ function CardApprove({ group }) {
             <img src={grupo.avatar} alt={grupo.name} />
             <div className="groupDescription">
               <h2>{grupo.name}</h2>
-              {grupo.description && <span>{grupo.description}</span>}
+              {grupo.category && <span>{grupo.category}</span>}
             </div>
           </div>
           <div className="btn-container">
@@ -258,7 +258,7 @@ function CardApprove({ group }) {
           width: 100%;
         }
         span {
-          color: #fff;
+          color: #000;
           background-color: $yankeesBlue;
         }
 
