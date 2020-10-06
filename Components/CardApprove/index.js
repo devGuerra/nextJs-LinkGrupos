@@ -251,7 +251,6 @@ function CardApprove({ group }) {
           padding-left: 5px;
           color: #fff;
         }
-
         .formGroup {
           display: flex;
           flex-direction: column;
