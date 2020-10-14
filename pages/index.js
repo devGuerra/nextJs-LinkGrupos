@@ -92,7 +92,6 @@ export default function Home({ categories, groups }, props) {
             ))}
         </div>
 
-
         <Pagination
           variant="outlined"
           shape="rounded"
