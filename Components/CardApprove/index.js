@@ -243,7 +243,6 @@ function CardApprove({ group }) {
           color: #fff;
           background-color: $yankeesBlue;
         }
-
         input {
           height: 50px;
           border-radius: 5px;
