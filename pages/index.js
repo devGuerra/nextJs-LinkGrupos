@@ -60,6 +60,7 @@ export default function Home({ categories, groups }, props) {
           property="og:title"
           content="Links de Grupos do Whatsapp - LinkGrupos"
         />
+        <meta name="google-site-verification" content="-luAWtBdgLaQWpdswFwJwY7Uz2p1S_vKnvX6lK15ay8" />
         <meta
           property="og:description"
           content="Os melhores links de grupos do whatsapp,  encontre as melhores categorias,
